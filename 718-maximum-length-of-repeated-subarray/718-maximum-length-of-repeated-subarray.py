@@ -12,6 +12,9 @@ class Solution:
                         dp[i][j]=1+dp[i-1][j-1]
                         mx=max(dp[i][j],mx)              
                  
+            
+            #print(dp[-1][-1]) initially the last row and colum are zero
+            #but not a good practice to write this way lol 
             return mx
 
         return helper(nums1,nums2)
