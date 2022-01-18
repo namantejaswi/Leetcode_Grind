@@ -12,7 +12,7 @@ class Solution:
         res = [ [ 0 for i in range(c) ] for j in range(r) ]
         
         
-        print(res)
+        #print(res)
         count=0
         
         for i in range(len(mat)):
