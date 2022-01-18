@@ -19,7 +19,7 @@ class Solution:
             else:
                 nums1[ptr1+ptr2+1]=nums2[ptr2]
                 ptr2-=1
-        print(ptr1,ptr2,nums1)  
+        #print(ptr1,ptr2,nums1)  
         
         #if elements remain num2        
         if ptr2>ptr1:
