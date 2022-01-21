@@ -6,9 +6,6 @@ class Solution:
         max_val=sum(nums)   #Arbitrarilty high  for m=0
             
         
-        #mid=(min_val+max_val)//2
-        
-        
         #Now we check if we can divide the array in m parts such that the max 
         #sum of any part is mid if not we increase our min_val to mid
         #if we can have the max value less than mid we update max_val to mid
@@ -26,7 +23,7 @@ class Solution:
             
 
             mid=(min_val+max_val)//2
-            print(mid)
+            #print(mid)
             
             #now we check we can split the sub array 
             def checker(nums, mid, m):
@@ -47,7 +44,7 @@ class Solution:
                 return True
                     
             res=checker(nums,mid,m)
-            print(res,mid)
+            #print(res,mid)
             
     
             if res==True:
