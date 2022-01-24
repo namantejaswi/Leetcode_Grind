@@ -19,12 +19,12 @@ class Solution:
             
             mid=(low+high)//2
             
-            print("low",low,"high",high)
-            print("mid",mid,"nums[mid]",nums[mid])
+            #print("low",low,"high",high)
+            #print("mid",mid,"nums[mid]",nums[mid])
             #unique elements mid cant be same as start
             
             if nums[mid]<nums[0]:
-                print("setting pos to",mid)
+                #print("setting pos to",mid)
                 pos=mid
                 high=mid-1
                 
