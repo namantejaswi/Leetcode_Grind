@@ -4,9 +4,7 @@ class Solution:
         
         
         dis={}
-        
-        
-        
+    
         index=0
         for cordinate in points:
             
