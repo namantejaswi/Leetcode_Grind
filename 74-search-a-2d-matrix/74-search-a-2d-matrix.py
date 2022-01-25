@@ -35,7 +35,7 @@ class Solution:
                  
                     
                 if matrix[row][mid]==target:
-                    print(row,mid)
+                    #print(row,mid)
                     return True
         
                 elif matrix[row][mid]>target:
