@@ -8,11 +8,18 @@ class Solution:
         catalan[0]=1
         catalan[1]=1
         
-        for i in range(2,n+1):
-            for j in range(1,i+1):
+        #for i in range(2,n+1):
+         #   for j in range(1,i+1):
                 
-                catalan[i]+=catalan[j-1]*catalan[i-j]
-                
-                
-                
-        return catalan[n]
+          #      catalan[i]+=catalan[j-1]*catalan[i-j]
+               
+        #return catalan[n]
+        
+
+        ctl=1
+        for i in range(0,n):
+            ctl=ctl*2*((2*i)+1)/(i+2)
+            
+        return int(ctl)
+        
+        
