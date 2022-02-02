@@ -5,16 +5,16 @@ class Solution:
         max_l=0
         
         left=0
-        
+        right=0
      
-        for end in range(len(s)):
+        for right in range(len(s)):
             
-            while s[end] in c_set:
+            while s[right] in c_set:
                 c_set.remove(s[left])
                 left+=1
                 
             
-            c_set.add(s[end])
-            max_l=max(max_l,end-left+1)
+            c_set.add(s[right])
+            max_l=max(max_l,right-left+1)
             
         return max_l
