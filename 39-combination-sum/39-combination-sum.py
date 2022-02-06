@@ -4,7 +4,7 @@ class Solution:
         
         ans=[]
         
-        def helper(target,res,index):
+        def helper(target,res):
             
             if target==0:
                 
@@ -17,15 +17,15 @@ class Solution:
                 return
             
             
-            for i in range(0,len(candidates)):
+            for i in range(len(candidates)):
                 
                 res.append(candidates[i])
-                helper(target-candidates[i],res,index)     
+                helper(target-candidates[i],res)     
                 #removelast added/backtrack
                 res.pop()
                 
         
-        helper(target,[],0)
+        helper(target,[])
         
         
         final_res=[]
