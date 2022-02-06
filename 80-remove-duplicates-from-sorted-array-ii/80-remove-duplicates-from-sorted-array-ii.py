@@ -16,7 +16,6 @@ class Solution:
                 
             else:   count=1 #new number
                 
-            
             if count<=2:
                 nums[left]=nums[right]
                 left+=1
