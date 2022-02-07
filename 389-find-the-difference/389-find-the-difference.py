@@ -11,7 +11,6 @@ class Solution:
             else:   freq_map[i]+=1
             
          
-        print(freq_map)
         for j in t:
             
             if j not in freq_map:   return j
@@ -24,9 +23,6 @@ class Solution:
                 else:   freq_map[j]-=1
                     
                    
-                
-            
-        
         return freq_map.keys()
                     
                     
