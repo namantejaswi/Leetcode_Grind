@@ -4,7 +4,7 @@ class Solution:
     
     
         dp=[[0 for i in range(n)] for j in range(m)]
-        print(dp)
+        #print(dp)
         
        
         for col in range(0,n):
