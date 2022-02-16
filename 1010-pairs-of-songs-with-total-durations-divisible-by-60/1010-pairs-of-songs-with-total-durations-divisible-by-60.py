@@ -4,7 +4,7 @@ class Solution:
         
         
         count=0
-        freq=[0 for i in range(60)]
+        freq=[0]*60
         
         for i in time:
             if i%60==0:     
