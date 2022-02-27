@@ -6,8 +6,8 @@ class Solution(object):
         """
        
         
-        print(ord("A"),ord("Z"))
-        print(ord("a"),ord("z"))
+        #print(ord("A"),ord("Z"))
+        #print(ord("a"),ord("z"))
         
         large=0
         small=0
@@ -28,6 +28,5 @@ class Solution(object):
                 
                 if small!=0:
                     return False
-            
             
         return True
