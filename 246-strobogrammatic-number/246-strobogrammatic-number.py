@@ -14,7 +14,6 @@ class Solution(object):
 
         while(left<=right):
             
-            
             if num[right] not in rotated or num[left] not in rotated or num[right]!=rotated[num[left]]:
                 return False
             
