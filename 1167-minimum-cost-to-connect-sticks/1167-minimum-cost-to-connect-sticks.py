@@ -5,6 +5,8 @@ class Solution(object):
         :rtype: int
         """
         
+        #Huffman Encoding
+        #Sexy sawal
         
         total=0
         heapq.heapify(sticks)
