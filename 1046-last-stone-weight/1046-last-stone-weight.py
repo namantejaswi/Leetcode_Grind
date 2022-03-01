@@ -15,11 +15,8 @@ class Solution(object):
             
             st2=heapq.heappop(stones)
         
-            
-            if st1==st2:
-                pass
-            
-            elif st1<st2:
+
+            if st1<st2:
                 st1=st1-st2
                 heapq.heappush(stones,st1)
                 
