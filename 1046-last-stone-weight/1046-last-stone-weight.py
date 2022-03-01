@@ -4,8 +4,6 @@ class Solution(object):
         :type stones: List[int]
         :rtype: int
         """
-        if len(stones)==1:
-            return stones[0]
         stones=[-1* i for i in stones]
         
         
