@@ -23,7 +23,7 @@ class Solution(object):
         
         heapify(heap)
         
-        print(heap)
+        #print(heap)
         val=heapq.heappop(heap)
         start=val[0]
         end=val[1]
