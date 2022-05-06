@@ -22,7 +22,7 @@ class Solution:
         
         num[p1],num[p2]=num[p2],num[p1]
         
-        print(num)
+        #print(num)
         
         res=0
         p=0
