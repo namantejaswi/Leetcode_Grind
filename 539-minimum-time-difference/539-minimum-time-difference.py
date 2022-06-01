@@ -8,7 +8,7 @@ class Solution:
         
        
         timePoints.sort()
-        print(timePoints)
+        #print(timePoints)
         
         lowest= timePoints[0]
         highest=timePoints[-1]
