@@ -7,11 +7,9 @@ class Solution:
     
         if len(palindrome)==1:  return ""
   
-        for i in range(len(palindrome)):
+        for i in range(len(palindrome)//2):
             
-            
-            if len(palindrome)%2==0 or i!=((len(palindrome)//2)+1)-1:
-        
+                    
             
                 if palindrome[i]!='a':
                     palindrome[i]='a'
