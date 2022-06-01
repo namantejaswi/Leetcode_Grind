@@ -6,10 +6,7 @@ class Solution:
         palindrome=list(palindrome)
     
         if len(palindrome)==1:  return ""
-        
-        if len(set(palindrome))==1: 
-            pass
-        
+  
         for i in range(len(palindrome)):
             
             
