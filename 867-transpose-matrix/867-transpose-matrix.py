@@ -9,7 +9,7 @@ class Solution:
                 
             mat.append(temp)
             
-        print(mat)
+        #print(mat)
                 
         
         for i in range(len(mat)):
