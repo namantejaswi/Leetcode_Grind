@@ -2,7 +2,7 @@ class Solution:
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         
     
-    #subarray's sum must be equalt to yarget
+    #subarray's sum must be equalt to target
     
         s=set()
         s.add(0)
