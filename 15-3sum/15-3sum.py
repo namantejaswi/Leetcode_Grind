@@ -10,7 +10,6 @@ class Solution:
         
         
         nums.sort()
-        
         ans=set()
         
         for i in range(size):
@@ -18,7 +17,6 @@ class Solution:
             
             lptr=int(i+1)    # we take i,lptr and rptr
             rptr=int(size-1)
-            
             
             while(lptr<rptr):
                 
