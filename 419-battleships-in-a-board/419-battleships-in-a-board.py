@@ -17,7 +17,7 @@ class Solution:
                         
                         continue
                     
-                    else: cnt+=1
+                    cnt+=1
         return cnt
                 
                 
