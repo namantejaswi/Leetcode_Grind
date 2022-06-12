@@ -31,7 +31,6 @@ class Solution:
                         break                        
             
             #print(summation)
-            #mx=max(mx,sum(nums[l:r+1])) #O(n^2) calculating sum every time
             mx=max(mx,summation)           
                 
         return mx
