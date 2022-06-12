@@ -1,19 +1,26 @@
 class Solution:
     def minOperations(self, nums: List[int], x: int) -> int:
-        current = sum(nums)
-        n = len(nums)
-        mini = inf
-        left = 0
-
-        for right in range(n):
-            # sum([0,..,left) + (right,...,n-1]) = x
-            current -= nums[right]
-            # if smaller, move `left` to left
-            while current < x and left <= right:
-                current += nums[left]
-                left += 1
-            # check if equal
-            if current == x:
-                mini = min(mini, (n-1-right)+left)
-
-        return mini if mini != inf else -1
+        
+        
+        curr=sum(nums)
+        n=len(nums)
+        l=0
+        r=0
+        mi=inf
+        
+        
+        for r in range(n):
+            
+            curr-=nums[r]
+            
+            while l<=r and curr< x:
+                
+                curr+=nums[l]
+                l+=1
+                
+            if curr ==x:
+                mi = min(mi,(n-1-r+l))
+                
+        if mi!=inf:
+            return mi
+        else: return -1
