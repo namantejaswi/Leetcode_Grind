@@ -23,4 +23,4 @@ class Solution:
                 
         if mi!=inf:
             return mi
-        else: return -1
+        return -1
