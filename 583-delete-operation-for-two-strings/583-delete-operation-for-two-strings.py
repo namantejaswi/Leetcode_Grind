@@ -17,7 +17,7 @@ class Solution:
             
             if dp[l1-1][l2-1]!=-1:  return dp[l1-1][l2-1]
             
-            elif word1[l1-1]==word2[l2-1]:
+            if word1[l1-1]==word2[l2-1]:
                 
                 dp[l1-1][l2-1]= 1+lcs(word1,word2,l1-1,l2-1)
                 return dp[l1-1][l2-1]
