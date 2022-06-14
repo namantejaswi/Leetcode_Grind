@@ -4,7 +4,7 @@ class Solution:
         
         
         #The same as longest common substring
-        #minimum number of deletions = length of larger string - lcs
+        #minimum number of deletions = length of both string - lcs
         
         dp=[[-1 for i in range(len(word2))] for j in range(len(word1))]
         #print(dp)
