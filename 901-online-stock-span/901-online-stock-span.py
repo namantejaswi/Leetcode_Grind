@@ -4,7 +4,7 @@ class StockSpanner:
         
         self.stack=[[0,0]]
         
-    #find index of previous smaller elment
+    #find index of previous greater elment
         
     def next(self, price: int) -> int:
         
