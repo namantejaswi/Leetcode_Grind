@@ -11,8 +11,8 @@ class Solution:
                 dic[i]=i
             else:   dic[i]+=i
                 
-        
         @lru_cache
+        
         def mx_point(n):
             
             if n==0:    return 0
