@@ -13,16 +13,14 @@ class Solution:
             while(n-1 in s):
                 l+=1
                 s.remove(n-1)
-                #print("removed",n-1)
                 n-=1
                 
             while(n2+1) in s:
                 l+=1
                 s.remove(n2+1)
-                #print("removed",n2+1)
                 n2+=1
                 
-            if i in s:  s.remove(i)
+           # if i in s:  s.remove(i)
             l+=1    #for element itself
             mx_l=max(l,mx_l)
             
