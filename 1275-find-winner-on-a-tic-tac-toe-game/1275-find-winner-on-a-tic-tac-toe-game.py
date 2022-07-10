@@ -19,7 +19,6 @@ class Solution:
                     
         #print(grid)
         
-        
         #check all row, col diagonal can use bitwise as well to speed up
         
         r1=grid[0]
