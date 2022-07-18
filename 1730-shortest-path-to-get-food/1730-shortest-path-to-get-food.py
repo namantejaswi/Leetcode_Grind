@@ -35,8 +35,7 @@ class Solution:
             
                 if 0 <= i < len(grid) and 0 <= j < len(grid[0]) and grid[i][j] != 'X':
                     q.append((i, j, count + 1))
-            
-            
+        
             
         return -1
             
