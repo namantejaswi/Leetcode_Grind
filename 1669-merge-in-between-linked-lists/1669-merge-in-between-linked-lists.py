@@ -27,17 +27,15 @@ class Solution:
             head=head.next
                         
             
-        print(node_A.val,node_B.val)
+        #print(node_A.val,node_B.val)
         
         
         node_A.next=list2
         
         h=list2
         while h.next:
-            h=h.next
-            
+            h=h.next    
         h.next=node_B
         
-
         
         return h1
