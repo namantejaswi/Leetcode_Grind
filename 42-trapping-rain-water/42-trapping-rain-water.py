@@ -26,7 +26,7 @@ class Solution:
                 
             right[size-j-1]=max_right_height
         
-        for k in range(0,size,1):
+        for k in range(size):
             
             trapped_water+=min(left[k],right[k])-height[k]
             
