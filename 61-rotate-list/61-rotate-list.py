@@ -18,7 +18,7 @@ class Solution:
             l+=1
             if not itr.next:  break
             else:   itr=itr.next
-        print(l)
+        
         if k%l==0:    return head
     
         st=head
@@ -37,9 +37,7 @@ class Solution:
         
         return end
         
-   
-        #Fails at l==k or l%k=0
-        
+           
         
         
         
