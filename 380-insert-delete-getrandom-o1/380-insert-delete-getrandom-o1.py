@@ -44,8 +44,6 @@ class RandomizedSet:
         
     def getRandom(self) -> int:
         
-        import random
-        #return random.choice(list(self.dic.keys()))
         return random.choice(self.idx_to_key)
 
 
