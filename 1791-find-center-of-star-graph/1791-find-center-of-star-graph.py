@@ -4,6 +4,6 @@ class Solution:
         a=edges[0]
         b=edges[1]
         
-        if a[0] in b:   return a[0]
+        if a[0] ==b[0] or a[0]==b[1]:   return a[0]
         else:   return a[1]
             
