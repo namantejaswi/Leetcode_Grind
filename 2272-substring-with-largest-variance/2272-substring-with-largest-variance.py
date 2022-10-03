@@ -27,7 +27,12 @@ class Solution:
                 
                 
                 for ch in s:
-                    if ch==ch1:
+                    
+                    if ch!=ch1 and ch!=ch2:
+                        continue
+                    
+                    
+                    elif ch==ch1:
                         c1_occured=True
                         diff+=1
                         max_diff=max(max_diff,last_c1_diff)
@@ -40,9 +45,7 @@ class Solution:
                         diff-=1
                         min_diff=min(min_diff,last_c2_diff)
                         last_c2_diff=diff
-                        
-                    else:
-                        continue
+                     
                         
                         
                     if c1_occured and c2_occured:
