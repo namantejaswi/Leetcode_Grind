@@ -26,7 +26,6 @@ class Solution:
                     if node.right:
                         
                         temp_node_1=node.right
-                        node.right=None
                         node.right=TreeNode(val)
                         node.right.right=temp_node_1
                     
@@ -36,7 +35,6 @@ class Solution:
                     if node.left:
                         
                         temp_node_2=node.left
-                        node.left=None
                         node.left=TreeNode(val)
                         node.left.left=temp_node_2
                         
