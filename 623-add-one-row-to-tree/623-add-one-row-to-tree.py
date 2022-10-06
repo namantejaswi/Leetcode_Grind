@@ -10,11 +10,9 @@ class Solution:
         r=TreeNode(0)
         z=r
         r.left=root
-        print(r.val)
         
         def helper(node,level):
             
-            #print(level)
             
             if not node:    return
             
@@ -25,7 +23,6 @@ class Solution:
                 level+=1
                 
                 if level==depth+1:
-                    print(level,node.val)
                     if node.right:
                         
                         temp_node_1=node.right
