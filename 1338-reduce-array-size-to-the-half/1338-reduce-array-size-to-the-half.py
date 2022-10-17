@@ -4,8 +4,6 @@ class Solution:
         l2=math.ceil(len(arr)//2)
         freq=dict(Counter(arr))
         
-       
-        
         h=[]
         for i in freq.values():
             h.append(-i)
