@@ -12,7 +12,7 @@ class Solution:
             if i not in arr_map:    arr_map[i]=i
             else:   arr_map[i]+=i
                 
-        #@lru_cache    
+        #@    
         dic={}
         def calc(n):
             
