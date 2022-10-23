@@ -7,7 +7,6 @@ class Solution:
         
         mx=0
         mx=max(top-special[-1],bottom-special[0],special[0]-bottom)
-        print(mx)
         
         for i in range(0,len(special)-1):
             
