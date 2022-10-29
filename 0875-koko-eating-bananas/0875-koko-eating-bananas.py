@@ -11,7 +11,7 @@ class Solution:
         #lowest sum(nums)/h
         
         
-        lo = 1
+        lo = max(1, math.ceil(sum(nums)/h))
         
         hi = max(nums)
         
