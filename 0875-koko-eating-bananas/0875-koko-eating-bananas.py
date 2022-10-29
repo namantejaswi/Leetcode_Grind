@@ -11,8 +11,8 @@ class Solution:
         #lowest sum(nums)/h
         
         
-        #lo = math.floor(sum(nums)/h) 
-        lo=1
+        lo = 1
+        
         hi = max(nums)
         
         while lo<hi:
@@ -22,9 +22,7 @@ class Solution:
             
             t=0
             
-            for i in nums:
-                
-                t+=math.ceil(i/mid)
+            for i in nums:  t+=math.ceil(i/mid)
                 
             if t<=h: hi=mid
                 
