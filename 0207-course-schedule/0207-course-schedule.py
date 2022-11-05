@@ -20,7 +20,7 @@ class Solution:
             if count_indegree[i]==0:
                 zero_stack.append(i)
             
-        print(zero_stack)
+
         
         while zero_stack:
             
