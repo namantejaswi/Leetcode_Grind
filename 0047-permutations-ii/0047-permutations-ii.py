@@ -1,33 +1,22 @@
 class Solution:
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
-    
-    
-    
-        res=set()
         
-        l=len(nums)
         
-        def dfs(path, used):
+        res=[]
+        
+        
+        def calc(curr_arr,rem_arr):
             
+            if not rem_arr and curr_arr not in res:
+                
+                res.append(curr_arr)
+                return res
             
-            
-            if len(path)==l:    
-                res.add(tuple(path[:]))
-                return
-            
-            else:
-                for i in range(len(nums)):
-                    if used[i]==True: continue
-                        
-                    else:
-                        path.append(nums[i])
-                        used[i]=True
-                    
-                        dfs(path,used)
-                        path.pop()
-                        used[i]=False
-                    
-                    
-        dfs([],[False]*l)
+            for i in range(len(rem_arr)):
+                
+                calc(curr_arr+[rem_arr[i]],rem_arr[:i]+rem_arr[i+1:])
+                
+        calc([],nums)
         return res
-            
+                
+           
