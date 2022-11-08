@@ -5,32 +5,19 @@ class Solution:
         
         res=[]
         
-        l=len(nums)
         
-        def dfs(path, used):
+        def calc(curr_arr,rem_arr):
             
-            
-            
-            if len(path)==l:    
+            if not rem_arr:
                 
-                res.append(path[:])
-                return
+                res.append(curr_arr)
+                return res
             
-            else:
-                for i in range(len(nums)):
-                    
-                    if used[i]==True: continue
-                        
-                    else:
-                        path.append(nums[i])
-                        used[i]=True
-                    
-                        dfs(path,used)
-                        path.pop()
-                        used[i]=False
-                    
-                    
-        dfs([],[False]*l)
+            for i in range(len(rem_arr)):
+                
+                calc(curr_arr+[rem_arr[i]],rem_arr[:i]+rem_arr[i+1:])
+                
+        calc([],nums)
         return res
-            
                 
+            
