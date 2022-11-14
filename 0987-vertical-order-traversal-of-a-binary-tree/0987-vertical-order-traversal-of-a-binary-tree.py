@@ -27,19 +27,13 @@ class Solution:
                 dfs(node.right,x+1,y+1)
                 
         dfs(root,0,0)
-        
-        
-        #now we have nodes in vertical columns so we traverse on basis of
-        #x cordinate if both x and y are same we choose the smaller value
-        
+                
         res=[]
-
-        
         for x in range(left_most,right_most+1):
             
             col=[]
-            for y,v in sorted(dic[x]):  #not sorting dic using a coppy to distinguis 
-                col.append(v)           #same cordinate
+            for y,v in sorted(dic[x]):   
+                col.append(v)          
                 
             res.append(col)
                 
