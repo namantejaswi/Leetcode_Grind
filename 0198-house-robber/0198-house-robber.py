@@ -9,7 +9,7 @@ class Solution:
         
         def rob(index):
             
-            if index==len(nums):    return 0
+            if index<0:    return 0
             
             if dp[index]!=-1:   return dp[index]
             
