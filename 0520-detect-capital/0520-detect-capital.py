@@ -4,7 +4,6 @@ class Solution:
         
         
         #0 for small 1 for caps
-        first_w=0
         
         def is_small(char):
             
