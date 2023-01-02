@@ -12,10 +12,7 @@ class Solution:
         
         count_caps=0
         count_small=0
-        all_lower=0
-        all_upper=0
-        
-        
+
         
         for i in range(1,len(word)):
 
