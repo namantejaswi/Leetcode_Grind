@@ -21,6 +21,7 @@ class Solution:
         target_sum-=n*1
         result = [1]*n
         
+        if target_sum==0:   return result
         while target_sum!=0:
             
             for i in range(len(result)):
@@ -34,7 +35,6 @@ class Solution:
                     result[i]+=5
                     target_sum-=5
                     
-        return result
             
         
         
