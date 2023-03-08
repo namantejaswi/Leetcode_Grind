@@ -6,7 +6,6 @@ class Solution:
         lo = 1
         hi = totalTrips*max(time)
         
-        print(hi)
         
         while lo<hi:
             
