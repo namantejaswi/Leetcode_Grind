@@ -14,9 +14,11 @@ class MyStack:
         for i in range(len(self.q)-1):
         
             elem = self.q.popleft()
-            self.q.append(elem)
+
+            self.push(elem)
             
-            #instead of appending to the same q we could create a new coppy 
+            #instead of appending to the same q we could create a new coppy and then
+            #deep coppy the 
             
         last = self.q.popleft()
         return last
