@@ -81,10 +81,8 @@ class Solution:
                 
             else:  dp[i] = dp[int(i//2)]+1
                     
+                            
                 
-                
-                
-        print(dp)
         return dp
         
         
