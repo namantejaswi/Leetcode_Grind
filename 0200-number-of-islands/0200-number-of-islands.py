@@ -11,7 +11,6 @@ class Solution:
         count = 0
         
         def dfs(x,y):
-            nonlocal count
             
             if x>=r or y>=c or x<0 or y<0:  return 
             
