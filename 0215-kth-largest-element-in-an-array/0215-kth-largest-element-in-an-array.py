@@ -14,7 +14,7 @@ class Solution:
             elif i >heap[0]:
                 
                 heapq.heappushpop(heap,i)
-         
+        #The combined action runs more efficiently than heappush() followed by a separate call to heappop().
         return heap[0]
                 
             
