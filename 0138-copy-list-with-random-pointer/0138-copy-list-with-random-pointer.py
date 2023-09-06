@@ -10,6 +10,10 @@ class Node:
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
         
+        
+        #The key idea is we have a dictionary of our nodes as while traversing throw
+        
+        
         if not head: return
     
     
@@ -38,6 +42,3 @@ class Solution:
             
         return dic[head]
             
-            
-            
-        
