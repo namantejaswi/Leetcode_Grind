@@ -11,9 +11,8 @@ class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
         
         
-        #The key idea is we have a dictionary of our nodes as while traversing throw
-        
-        
+       
+        #make dictionary and iterate twice first time we wont have the random nxt ptr always 
         if not head: return
     
     
