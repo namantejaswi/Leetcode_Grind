@@ -2,5 +2,5 @@
 
 
 Select  p.product_name, s.year, s.price
-From Sales s
-Join Product p on s.product_id = p.product_id
+From Sales as s
+Join Product as p on s.product_id = p.product_id
