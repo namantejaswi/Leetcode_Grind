@@ -33,14 +33,22 @@ class Solution:
             bfs.append(lvl)
             lvl=[]
             
-        heap = []
+        arr = []
         
         for idx in range(len(bfs)):
             
-            heap.append([-1*sum(bfs[idx]),idx])
-            
-            
-        heapq.heapify(heap)
+            arr.append([sum(bfs[idx]),idx])
+      
+        res=None
+        mx=float("-inf")
+        for s,i in arr:
+            if s>mx:    
+                mx = s
+                res = i
+                
+        return res+1
         
-        return heap[0][1]+1
+        
+        
+        
             
