@@ -14,15 +14,13 @@ class Solution:
         
         for p in sorted_people:
         
-            while idx<len(flowers) and flowers[idx][0]<=p:#flower blooms before arrival
+            while idx<len(flowers) and flowers[idx][0]<=p:#the number of flower that blooms before arrival
             
                 heapq.heappush(heap,flowers[idx][1])
                 idx+=1
                 
-            while heap and heap[0]<p:
+            while heap and heap[0]<p:   #now some flowers may alreaddy be done till the time person p comes so we get rid of flowwers whosse bloom end before arrival
                 heapq.heappop(heap)
                 
-            dic_count[p] = len(heap)     #no. of flowers the person will see
-                
-        
+            dic_count[p] = len(heap)     #no. of flowers the person will see 
         return [dic_count[i] for i in people]
