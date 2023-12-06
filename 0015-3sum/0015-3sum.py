@@ -1,35 +1,52 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         
-        #Brute Force O(n^3)
         
-        
-        res =  set()
+        res = set()
         
         nums.sort()
+
+        def two_sum(idx):
         
-        
-        for i in range(len(nums)-1):    # for last 3
             
-            lptr = i+1
+            lptr = idx + 1
             rptr = len(nums)-1
-        
 
             while lptr<rptr:
 
-                val = nums[i]+ nums[lptr] + nums[rptr]
-
-                if val ==0: 
-                    res.add((nums[i],nums[lptr],nums[rptr]))
-                    lptr+=1      #see if theres another cobination to the right of i   
+                val = nums[lptr]+nums[rptr]+nums[idx]
+                if val==0:  
+                    res.add((nums[idx],nums[lptr],nums[rptr]))
+                    lptr+=1
+                    rptr-=1
+                    while lptr<rptr and nums[lptr]==nums[lptr-1]:   lptr+=1
+                    
                     
                 elif val<0: lptr+=1
+
                 elif val>0: rptr-=1
                 
+
+        
+        for i in range(len(nums)):
+            
+        #if curr is +ve the remainins numbeers to right are also+ve so cant sum to 0
+            
+            if nums[i]>0:   break 
                 
-        #print(res)
-        ans=[]
+            else:  two_sum(i)
+                
+            
+        ans = []
         for tupple in res:
             ans.append(list(tupple))
             
         return ans
+                
+                
+
+                
+                
+                
+        
+            
