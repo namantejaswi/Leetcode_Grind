@@ -1,8 +1,7 @@
 class Solution:
     def judgeCircle(self, moves: str) -> bool:
         
-        x=0
-        y=0
+        x,y=0,0
         def move(m):
             
             nonlocal x,y
