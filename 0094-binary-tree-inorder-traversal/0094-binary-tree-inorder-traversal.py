@@ -8,19 +8,26 @@ class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         
         
-        res = []
-      
-        def inorder(root):
-            
-            nonlocal res
-            if not root: return
-            
-            inorder(root.left)
-            res.append(root.val)
-            inorder(root.right)
-            
-        inorder(root)
+        #Iterative
         
-        return res
+        stack = []
+        
+        res = []
+        
+        while root or stack:
             
+            if root:
+                stack.append(root)
+                root=root.left
+                
+            else:
+                
+                popped_node = stack.pop()
+                res.append(popped_node.val)
+                root = popped_node.right
+                
+                
+        return res
+                
+        
         
