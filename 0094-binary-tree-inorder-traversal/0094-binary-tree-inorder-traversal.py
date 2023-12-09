@@ -9,16 +9,18 @@ class Solution:
         
         
         res = []
-        
-        def dfs(node):
+      
+        def inorder(root):
             
-            if not node:    return
+            nonlocal res
+            if not root: return
             
-            dfs(node.left)
-            res.append(node.val)
-            dfs(node.right)
+            inorder(root.left)
+            res.append(root.val)
+            inorder(root.right)
             
-            
-        dfs(root)
+        inorder(root)
         
         return res
+            
+        
