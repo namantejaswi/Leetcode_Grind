@@ -1,9 +1,7 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         
-        import math
-        cnt=0
-        
+        #import math
         prime = [2]
         
         def is_prime(x):
