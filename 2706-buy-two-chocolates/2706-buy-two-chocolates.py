@@ -16,6 +16,6 @@ class Solution:
                 
                 min_2 = min(p,min_2)
                 
-        print(min_1,min_2)
+        #print(min_1,min_2)
         if money -min_1-min_2 >=0: return money-min_1-min_2
         else:   return money
