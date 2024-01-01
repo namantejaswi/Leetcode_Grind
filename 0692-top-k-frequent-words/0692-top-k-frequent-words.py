@@ -3,28 +3,20 @@ class Solution:
         
         
         
-        freq={}
-        
-        for w in words:
-            
-            if w in freq:   freq[w]+=1
                 
-            else:   freq[w]=1
+        dic={}
+        
+        
+        for i in words:
+            
+            if i not in dic:
+                dic[i]=1
+                
+            else:   dic[i]+=1
                 
         
-        res=[]
-        
-        for key,val in freq.items():
-            
-            res.append([key,val])
-            
-        res.sort(key = lambda x:(-x[1],x[0]))   #sort by freq and lexo for tie
-        
+          
+        sorted_dic=sorted(dic,key=lambda x:(-dic[x],x))
 
-        ans =[]        
-        cnt=0
-        for i in range(k):   
-            ans.append(res[i][0])
-            
-            
-        return ans
+        return sorted_dic[:k]
+        
