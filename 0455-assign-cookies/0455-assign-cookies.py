@@ -2,24 +2,29 @@ class Solution:
     def findContentChildren(self, g: List[int], s: List[int]) -> int:
         
         
-        g.sort()
         s.sort()
-        s=deque(s)
+        g.sort()
         
         
         cnt=0
-        index=0
-        while(index<len(g)):
         
-            if not s:   return cnt
-            
-            curr = s.popleft()
-            
-            if curr>=g[index]:
+        size_ptr=0
+        greed_ptr=0
+        
+        while greed_ptr<len(g) and size_ptr<len(s):
+
+            if s[size_ptr]>=g[greed_ptr]:
                 cnt+=1
-                index+=1
+                size_ptr+=1
+                greed_ptr+=1
+                
+            else:   
+                size_ptr+=1
                 
                 
         return cnt
                 
-                
+        
+        
+        
+        
