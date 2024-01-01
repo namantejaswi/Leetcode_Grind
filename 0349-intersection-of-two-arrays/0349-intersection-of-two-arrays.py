@@ -5,11 +5,11 @@ class Solution:
         res=[]
         
         s1=set(nums1)
-        s2=set(nums2)
         
         
-        for n in s1:
-            if n in s2: res.append(n)
-                
+        for n in nums2:
+            if n in s1: 
+                res.append(n)
+                s1.remove(n)
                 
         return res
