@@ -19,7 +19,7 @@ class Solution:
         
         arr = [[-freq,word] for word,freq in dic.items()]
 
-        print(arr)
+        #print(arr)
         
         #python only has min heap so we multipy frquency by -1 to have largest frequency on top of the heap
         
