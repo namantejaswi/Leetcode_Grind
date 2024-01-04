@@ -15,8 +15,26 @@ class Solution:
             else:   dic[i]+=1
                 
         
-          
-        sorted_dic=sorted(dic,key=lambda x:(-dic[x],x))
+        #we heapify the frequency
+        
+        arr = [[-freq,word] for word,freq in dic.items()]
 
-        return sorted_dic[:k]
+        print(arr)
+        
+        #python only has min heap so we multipy frquency by -1 to have largest frequency on top of the heap
+        
+        heapq.heapify(arr)
+        
+        res=[]
+        
+        while(len(res)!=k):
+            
+            res.append((heapq.heappop(arr)[1]))
+            
+            
+        return res
+        
+        
+        
+        
         
