@@ -14,7 +14,6 @@ class Solution:
         
         while ptr1>=0 and ptr2>=0:
             
-            print(nums1[ptr1],nums2[ptr2])
             if nums1[ptr1]>nums2[ptr2]:
                 
                 nums1[idx]=nums1[ptr1]
