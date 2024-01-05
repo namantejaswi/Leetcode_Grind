@@ -15,8 +15,8 @@ class Solution:
         numerator = abs(numerator)
         denominator = abs(denominator)
         
-        qoutient,remainder = divmod(numerator,denominator)
-        res+= str(qoutient)
+        q,remainder = divmod(numerator,denominator)
+        res+= str(q)
         
         seen_remainder = {}
         
