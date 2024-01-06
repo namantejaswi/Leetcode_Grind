@@ -2,29 +2,36 @@ class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
         
         
+        l = len(grid)
+        w = len(grid[0])
         
         
-        for i in range(len(grid)):
-            for j in range(len(grid[0])):
+        dp = [[float("inf") for i in range(w) ] for j in range(l)]
+        
+        
+        #now because we dont have any negative number cell[i][j] will have min cell[i-1][j] cell[i][j-1] it wont be so if we have -ve numbers 
+        
+        for i in range(l):
+            for j in range(w):
                 
+
+                if i==0 and j==0:   
+                    print(grid[0][0])
+                    dp[i][j]=grid[0][0]
+
+                elif j==0 and i!=0:    dp[i][j]= dp[i-1][j]+grid[i][j]
+                    
+                elif i==0 and j!=0: dp[i][j] = dp[i][j-1]+grid[i][j]
+                    
+                else:   
+                    dp[i][j]=grid[i][j]+min(dp[i-1][j],dp[i][j-1])
+                     
                 
-                #if we are not at the starting grid
-                if i>0 and j>0:
-                    
-                    #modify grid to represent the minimum cost to reach that point
-                    
-                    grid[i][j]+=min(grid[i-1][j],grid[i][j-1])
+        return dp[-1][-1]
                     
                     
-                elif i==0 and j>0:
-                    #in the oth row we can reach using only right moves
-                    
-                    grid[i][j]+=grid[i][j-1]
-                    
-                elif i>0 and j==0:
-                # in the same col we can only rech by going down
                 
-                    grid[i][j]+=grid[i-1][j]
                     
                     
-        return grid[-1][-1]
+                    
+                
