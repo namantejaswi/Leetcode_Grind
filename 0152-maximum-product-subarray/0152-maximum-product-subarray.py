@@ -35,7 +35,7 @@ class Solution:
                 mx = max(mx,max_prod)
                 
                 if mi*nums[i] >0: flag=1
-        print(flag)          
+        #print(flag)          
         if flag==0 : return  0
         if flag==0: return max(nums)
         return mx
