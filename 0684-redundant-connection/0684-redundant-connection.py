@@ -21,7 +21,7 @@ class Solution:
         
         def union(x,y):
             
-            p_x, p_y = find(x), find(y) #can save in arr/dic
+            p_x, p_y = find(x), find(y) 
             
             if p_x == p_y:  return True
             
