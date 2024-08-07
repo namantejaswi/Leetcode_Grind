@@ -27,7 +27,7 @@ class Solution:
             
             else: 
                 
-                parent[p_x] = p_y
+                parent[p_y] = p_x
                 return False
             
             
