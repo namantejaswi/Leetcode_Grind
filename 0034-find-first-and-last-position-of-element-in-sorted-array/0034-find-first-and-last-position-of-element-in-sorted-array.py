@@ -1,76 +1,37 @@
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         
+        n = len(nums)
+
         
-        #we first use binary search to find the element
-        #then we use binary search to find the start and then to find the end
-        
-        
-        
-        
-        def leftsearch(nums,target):
+        def find_leftmost_equal_or_greater(target):
             
-            low=0
-            high=len(nums)-1
-            pos=-1
+            pos = n
+            l = 0
+            r = len(nums)-1
             
-            while(low<=high):
+            while l<=r:
                 
-                mid = (low+high)//2
+                mid = (l+r)//2
                 
-                if nums[mid]==target:
+                if nums[mid]>=target:
                     
-                    #we need to find leftmost so we shift interval toward left
+                    pos = mid
+                    r = mid-1   #mid valid but we try to find a tighter bound
                     
-                    high=mid-1
-                    pos=mid
+                else: 
+                    l = mid+1   #mid invalid check fomr left = mid+1
                     
-                    
-                elif nums[mid]<target:
-                    low=mid+1
-                    
-                elif nums[mid]>target:
-                    high=mid-1
                     
             return pos
-        
-        
-        
-        def rightsearch(nums,target):
-            
-            low=0
-            high=len(nums)-1
-            pos=-1
-            
-            while(low<=high):
-                mid=(low+high)//2
-                if nums[mid]==target:
-                #we need right most so we update low to mid+1
                 
-                    low=mid+1
-                    pos=mid
-                
-                
-                if nums[mid]>target:
-                    high=mid-1
-                
-                if nums[mid]<target:
-                    low=mid+1
-                
-            return pos
-        
-        
-        
-        l=leftsearch(nums,target)
-        r=rightsearch(nums,target)
-        
-        return [l,r]
-        
-        
-                    
-        
-                    
-                    
+        p1=find_leftmost_equal_or_greater(target)
+        p2=find_leftmost_equal_or_greater(target+1)-1
+
+
+        if p1 == n or p1>p2:  return[-1,-1]
+
+        return [p1,p2]
                     
                     
                     
