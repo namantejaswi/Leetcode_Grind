@@ -2,8 +2,10 @@ class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
         
         
-        #Peak element is the left most element which is greater than next next
+        #Peak element/pivot is the left most element which is greater than next element
         if len(nums)==1:    return 0
+        
+        #Edge cases array has one element, peak is at start or end.
         
         l = 0 
         r = len(nums)-1
