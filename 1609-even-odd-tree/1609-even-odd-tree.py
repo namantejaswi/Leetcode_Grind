@@ -29,7 +29,6 @@ class Solution:
         
         q=deque([root])
         
-        res = []
         idx=0
         while q:
             
@@ -47,7 +46,6 @@ class Solution:
                 
          
             #print(lvl)
-            res.append(lvl)
                
         #print(res)
         #we can reduce axuilary space to O(width) or O(2*height) or O(logn) by checking each level as we generate it it and it would also help us return early
