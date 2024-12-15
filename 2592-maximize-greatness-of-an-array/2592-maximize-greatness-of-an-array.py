@@ -2,11 +2,16 @@ class Solution:
     def maximizeGreatness(self, nums: List[int]) -> int:
         
         
-        nums.sort()
+        return len(nums) - max(Counter(nums).values())
+
         
-        res=0
-        for n in nums:
-            if n>nums[res]:
-                res+=1
+        
+        
+#         nums.sort()
+        
+#         res=0
+#         for n in nums:
+#             if n>nums[res]:
+#                 res+=1
                 
-        return res
+#         return res
